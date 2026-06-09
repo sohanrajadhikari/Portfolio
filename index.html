@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Sohan Raj Adhikari</title>
+    <meta name="description"
+        content="Portfolio of Sohan Raj Adhikari, a Software Engineering Student & Systems Thinker from Kathmandu. Turning curiosity into functional logic through first-principles problem solving and low-level engineering.">
+    <meta name="keywords"
+        content="Software Engineering, CS Student, Systems Programming, Python, C, Backend, Kathmandu, Nepal, CS50, Data Automation">
+    <meta name="author" content="Sohan Raj Adhikari">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sohan Raj Adhikari | Software Engineering Student & Systems Thinker">
+    <meta property="og:description"
+        content="Turning curiosity into functional logic. Inspired by first-principles problem solving and low-level engineering.">
+    <meta property="og:image" content="https://example.com/assets/profile-image.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sohan Raj Adhikari | Software Engineering Student & Systems Thinker">
+    <meta name="twitter:description"
+        content="Turning curiosity into functional logic. Inspired by first-principles problem solving and low-level engineering.">
+    <meta name="twitter:image" content="https://example.com/assets/profile-image.jpg">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sohan Raj Adhikari",
+      "jobTitle": "Software Engineering Student & Systems Thinker",
+      "url": "https://example.com",
+      "sameAs": [
+        "https://github.com/sohanrajadhikari,
+        "https://linkedin.com/in/sohanrajadhikari",
+        "https://twitter.com/example"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- 1. Loading Screen -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <span class="logo-text-large">RJ.</span>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- 2. Sticky Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">RJ<span>.</span></a>
+
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://www.github.com/sohanrajadhikari" target="_blank" rel="noopener noreferrer"
+                    class="nav-github-link" aria-label="GitHub Profile">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>GitHub</title>
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="moon" class="moon-icon"></i>
+                    <i data-lucide="sun" class="sun-icon"></i>
+                </button>
+                <button class="cmd-palette-btn" id="cmd-palette-btn" aria-label="Open Command Palette">
+                    <i data-lucide="command"></i> K
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-nav-links">
+                <a href="#home" class="mobile-link">Home</a>
+                <a href="#about" class="mobile-link">About</a>
+                <a href="#skills" class="mobile-link">Skills</a>
+                <a href="#process" class="mobile-link">Process</a>
+                <a href="#projects" class="mobile-link">Projects</a>
+                <a href="#experience" class="mobile-link">Experience</a>
+                <a href="#services" class="mobile-link">Services</a>
+                <a href="#contact" class="mobile-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 3. Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg-gradient"></div>
+            <div class="container hero-container">
+                <div class="hero-content fade-up-anim">
+                    <div class="availability-badge">
+                        <span class="status-dot"></span> Open to collaborations & internships
+                    </div>
+                    <h1 class="hero-title">Hi, I'm <span class="gradient-text">Sohan</span></h1>
+                    <h2 class="hero-subtitle">Software Engineering Student & Systems Thinker</h2>
+                    <p class="hero-description">Turning curiosity into functional logic. Inspired by first-principles
+                        problem solving and low-level engineering.</p>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>GitHub</title>
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper fade-in-anim">
+                    <div class="glass-card image-card">
+                        <img src="assets/profile.png" alt="Raj Profile" class="profile-img">
+                        <div class="tech-chip float-1"><i data-lucide="terminal"></i> Python</div>
+                        <div class="tech-chip float-2"><i data-lucide="cpu"></i> C</div>
+                        <div class="tech-chip float-3"><i data-lucide="database"></i> SQL</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-indicator" aria-label="Scroll Down">
+                <i data-lucide="mouse"></i>
+                <span>Scroll</span>
+            </a>
+        </section>
+
+        <!-- 4. Achievement Metrics -->
+        <section class="metrics-section">
+            <div class="container metrics-grid">
+                <div class="metric-card fade-up-anim">
+                    <h3 class="counter" data-target="20">0</h3><span>+</span>
+                    <p>Cups of Coffee to Ship Splexer</p>
+                </div>
+                <div class="metric-card fade-up-anim" style="transition-delay: 0.1s;">
+                    <h3 class="counter" data-target="1">0</h3><span></span>
+                    <p>Intense Hackathon App Built</p>
+                </div>
+                <div class="metric-card fade-up-anim" style="transition-delay: 0.2s;">
+                    <h3 class="counter" data-target="4">0</h3><span></span>
+                    <p>Active Experimental Projects</p>
+                </div>
+                <div class="metric-card fade-up-anim" style="transition-delay: 0.3s;">
+                    <h3 class="counter" data-target="100">0</h3><span>%</span>
+                    <p>Fuelled by Football &amp; Chiya</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header fade-up-anim">
+                    <span class="section-subtitle">About Me</span>
+                    <h2 class="section-title">A student who thinks in <span class="gradient-text">systems and
+                            logic</span>.</h2>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text fade-up-anim">
+                        <p>I got hooked on computer science through Harvard's CS50, learning to love the grind of
+                            breaking down complex problems. Fresh out of high school at St. Xavier's, Kathmandu, I spend
+                            my time exploring everything from data extraction pipelines to low-level systems, rapid
+                            prototyping financial trackers, and playing the guitar.</p>
+
+                        <div class="highlight-cards">
+                            <div class="highlight-card">
+                                <i data-lucide="brain"></i>
+                                <h4>First-Principles Thinking</h4>
+                            </div>
+                            <div class="highlight-card">
+                                <i data-lucide="bot"></i>
+                                <h4>Data Automation</h4>
+                            </div>
+                            <div class="highlight-card">
+                                <i data-lucide="zap"></i>
+                                <h4>Rapid Prototyping</h4>
+                            </div>
+                            <div class="highlight-card">
+                                <i data-lucide="cpu"></i>
+                                <h4>Low-Level Curiosity</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Tech Stack Marquee -->
+        <div class="marquee-wrapper">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>Python</span>
+                    <span class="dot">•</span>
+                    <span>C</span>
+                    <span class="dot">•</span>
+                    <span>PHP</span>
+                    <span class="dot">•</span>
+                    <span>JavaScript</span>
+                    <span class="dot">•</span>
+                    <span>SQL</span>
+                    <span class="dot">•</span>
+                    <span>Bash</span>
+                    <span class="dot">•</span>
+                    <span>FastAPI</span>
+                    <span class="dot">•</span>
+                    <span>Flask</span>
+                    <span class="dot">•</span>
+                    <span>Node.js</span>
+                    <span class="dot">•</span>
+                    <span>Pandas</span>
+                    <span class="dot">•</span>
+                    <span>Git</span>
+                    <span class="dot">•</span>
+                    <span>Linux</span>
+                    <span class="dot">•</span>
+                </div>
+                <div class="marquee-content">
+                    <span>Python</span>
+                    <span class="dot">•</span>
+                    <span>C</span>
+                    <span class="dot">•</span>
+                    <span>PHP</span>
+                    <span class="dot">•</span>
+                    <span>JavaScript</span>
+                    <span class="dot">•</span>
+                    <span>SQL</span>
+                    <span class="dot">•</span>
+                    <span>Bash</span>
+                    <span class="dot">•</span>
+                    <span>FastAPI</span>
+                    <span class="dot">•</span>
+                    <span>Flask</span>
+                    <span class="dot">•</span>
+                    <span>Node.js</span>
+                    <span class="dot">•</span>
+                    <span>Pandas</span>
+                    <span class="dot">•</span>
+                    <span>Git</span>
+                    <span class="dot">•</span>
+                    <span>Linux</span>
+                    <span class="dot">•</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header fade-up-anim text-center">
+                    <span class="section-subtitle">My Arsenal</span>
+                    <h2 class="section-title">Technical <span class="gradient-text">Proficiency</span></h2>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category glass-card fade-up-anim">
+                        <h3>Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i data-lucide="terminal"></i> Python</span>
+                            <span class="skill-tag"><i data-lucide="cpu"></i> C</span>
+                            <span class="skill-tag"><i data-lucide="braces"></i> PHP</span>
+                            <span class="skill-tag"><i data-lucide="code-2"></i> JavaScript</span>
+                            <span class="skill-tag"><i data-lucide="database"></i> SQL</span>
+                            <span class="skill-tag"><i data-lucide="square-terminal"></i> Bash</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Tools -->
+                    <div class="skill-category glass-card fade-up-anim" style="transition-delay: 0.1s;">
+                        <h3>Backend &amp; Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i data-lucide="zap"></i> FastAPI</span>
+                            <span class="skill-tag"><i data-lucide="flask-conical"></i> Flask</span>
+                            <span class="skill-tag"><i data-lucide="server"></i> Node.js</span>
+                            <span class="skill-tag"><i data-lucide="bar-chart-2"></i> Pandas</span>
+                            <span class="skill-tag"><i data-lucide="git-branch"></i> Git</span>
+                            <span class="skill-tag"><i data-lucide="monitor"></i> Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Process Section -->
+        <section id="process" class="process-section section-padding">
+            <div class="container">
+                <div class="section-header fade-up-anim text-center">
+                    <span class="section-subtitle">Workflow</span>
+                    <h2 class="section-title">How I <span class="gradient-text">Work</span></h2>
+                </div>
+
+                <div class="process-timeline">
+                    <div class="process-step fade-up-anim">
+                        <div class="step-icon"><i data-lucide="search"></i></div>
+                        <div class="step-content">
+                            <h3>01. Discover</h3>
+                            <p>Research, requirements gathering, and strategic planning to ensure project alignment.</p>
+                        </div>
+                    </div>
+                    <div class="process-step fade-up-anim" style="transition-delay: 0.1s;">
+                        <div class="step-icon"><i data-lucide="pen-tool"></i></div>
+                        <div class="step-content">
+                            <h3>02. Design</h3>
+                            <p>Creating wireframes, high-fidelity prototypes, and comprehensive design systems.</p>
+                        </div>
+                    </div>
+                    <div class="process-step fade-up-anim" style="transition-delay: 0.2s;">
+                        <div class="step-icon"><i data-lucide="terminal"></i></div>
+                        <div class="step-content">
+                            <h3>03. Develop</h3>
+                            <p>Scalable frontend architecture, clean code implementation, and API integrations.</p>
+                        </div>
+                    </div>
+                    <div class="process-step fade-up-anim" style="transition-delay: 0.3s;">
+                        <div class="step-icon"><i data-lucide="rocket"></i></div>
+                        <div class="step-content">
+                            <h3>04. Launch</h3>
+                            <p>Rigorous testing, performance optimization, accessibility checks, and final deployment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Featured Projects -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header fade-up-anim">
+                    <span class="section-subtitle">Portfolio</span>
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                </div>
+
+                <div class="project-filters fade-up-anim">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Splexer -->
+                    <div class="project-card glass-card fade-up-anim" data-category="web">
+                        <div class="project-img-wrapper">
+                            <img src="assets/project-1.png" alt="Splexer Financial Tracker">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-icon"><i data-lucide="external-link"></i> Live Demo</a>
+                                <a href="#" class="btn btn-icon btn-secondary"><i data-lucide="github"></i> Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>PHP</span>
+                                <span>NLP</span>
+                                <span>Web App</span>
+                            </div>
+                            <h3>Splexer</h3>
+                            <p>A PHP-based analytics application that uses basic NLP concepts to parse natural text
+                                financial entries and map them to dynamic, visual data graphs.</p>
+                            <div class="project-case-study">
+                                <p><strong>Problem:</strong> Tracking manual daily expenses is tedious and unengaging.
+                                </p>
+                                <p><strong>Solution:</strong> Built a PHP application utilizing NLP to parse natural
+                                    text financial entries into visual data graphs.</p>
+                                <p><strong>Outcome:</strong> A highly functional financial data tracking and
+                                    visualization prototype built via rapid prototyping.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Daraz Tracker -->
+                    <div class="project-card glass-card fade-up-anim" data-category="python"
+                        style="transition-delay: 0.1s;">
+                        <div class="project-img-wrapper">
+                            <img src="assets/before-after.jpg" alt="Daraz Price Tracker">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-icon"><i data-lucide="external-link"></i> Live Demo</a>
+                                <a href="#" class="btn btn-icon btn-secondary"><i data-lucide="github"></i> Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Data Automation</span>
+                            </div>
+                            <h3>Daraz Tracker</h3>
+                            <p>An automated Python web extraction tool that reverse-engineered internal production APIs
+                                to scrape and log live product listings into structured storage.</p>
+                            <div class="project-case-study">
+                                <p><strong>Problem:</strong> Tracking e-commerce market price fluctuations in Nepal is
+                                    entirely manual.</p>
+                                <p><strong>Solution:</strong> Engineered an automated Python tool that
+                                    reverse-engineered internal APIs to scrape and log live product data.</p>
+                                <p><strong>Outcome:</strong> Created a solid technical foundation for localized market
+                                    analytics and price drop triggers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: run_away -->
+                    <div class="project-card glass-card fade-up-anim" data-category="python">
+                        <div class="project-img-wrapper">
+                            <img src="assets/run.png" alt="run_away Running Tracker">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-icon"><i data-lucide="external-link"></i> Live Demo</a>
+                                <a href="#" class="btn btn-icon btn-secondary"><i data-lucide="github"></i> Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>CS50</span>
+                            </div>
+                            <h3>run_away</h3>
+                            <p>A lightweight running telemetry tracking application built as a CS50 final project,
+                                focusing on state management, user profile isolation, and file data persistence.</p>
+                            <div class="project-case-study">
+                                <p><strong>Problem:</strong> Needing a streamlined, custom logger for monitoring
+                                    personal running telemetry.</p>
+                                <p><strong>Solution:</strong> Developed a lightweight tracking app focusing on state
+                                    management, user profile isolation, and file data persistence.</p>
+                                <p><strong>Outcome:</strong> Successfully demonstrated core software architecture and
+                                    logical data processing structures.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: FundMyVision -->
+                    <div class="project-card glass-card fade-up-anim" data-category="backend"
+                        style="transition-delay: 0.1s;">
+                        <div class="project-img-wrapper">
+                            <img src="assets/logo.png" alt="FundMyVision Hackathon">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-icon"><i data-lucide="external-link"></i> Live Demo</a>
+                                <a href="#" class="btn btn-icon btn-secondary"><i data-lucide="github"></i> Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>Node.js</span>
+                                <span>Backend API</span>
+                                <span>Hackathon</span>
+                            </div>
+                            <h3>FundMyVision</h3>
+                            <p>An online shark-tank-style startup pitch platform built during a high-stakes hackathon,
+                                with a personally engineered Node.js backend API.</p>
+                            <div class="project-case-study">
+                                <p><strong>Problem:</strong> Crowdsourcing investment platforms require rapid, modern
+                                    MVPs to secure validation under time pressure.</p>
+                                <p><strong>Solution:</strong> Collaborated in a team to architect a pitch platform,
+                                    personally designing and engineering the Node.js backend API routes.</p>
+                                <p><strong>Outcome:</strong> Delivered a working team prototype under intense deadline
+                                    pressure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Experience Timeline -->
+        <section id="experience" class="experience-section section-padding">
+            <div class="container">
+                <div class="section-header fade-up-anim text-center">
+                    <span class="section-subtitle">Academic</span>
+                    <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item fade-up-anim">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">2024 – 2026</span>
+                            <h3>+2 Science</h3>
+                            <h4>St. Xavier's College, Maitighar, Kathmandu</h4>
+                            <ul>
+                                <li>Completed high school board examinations with a heavy focus on physics, mathematics,
+                                    and foundational programming.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-up-anim">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">2025</span>
+                            <h3>CS50: Introduction to Computer Science</h3>
+                            <h4>Harvard University (via edX)</h4>
+                            <ul>
+                                <li>Self-studied Harvard's flagship CS course, developing a rigorous foundation in
+                                    algorithms, memory management, data structures, and systems-level thinking.</li>
+                                <li>Developed run_away — a CS50 final project tracking personal running telemetry with
+                                    file-based persistence.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-up-anim">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">2024 – Present</span>
+                            <h3>Self-Directed Engineering Projects</h3>
+                            <h4>Independent</h4>
+                            <ul>
+                                <li>Built Splexer — a PHP-based financial tracker using NLP to parse natural language
+                                    expense entries.</li>
+                                <li>Engineered Daraz Tracker — a Python scraper reverse-engineering internal APIs for
+                                    Nepal e-commerce price monitoring.</li>
+                                <li>Collaborated on FundMyVision — a hackathon startup pitch platform, personally
+                                    building the Node.js backend API.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Services Section -->
+        <section id="services" class="services-section section-padding">
+            <div class="container">
+                <div class="section-header fade-up-anim text-center">
+                    <span class="section-subtitle">Areas of Focus</span>
+                    <h2 class="section-title">What I'm <span class="gradient-text">Building Towards</span></h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card glass-card fade-up-anim">
+                        <i data-lucide="terminal" class="service-icon"></i>
+                        <h3>Software Engineering</h3>
+                        <p>Building clean, reliable scripts and backend applications. Interested in writing software
+                            that solves real problems with minimal dependencies and clear logic.</p>
+                    </div>
+
+                    <div class="service-card glass-card fade-up-anim" style="transition-delay: 0.1s;">
+                        <i data-lucide="cpu" class="service-icon"></i>
+                        <h3>Systems &amp; Low-Level Development</h3>
+                        <p>Exploring virtual machine architectures, compilers, and internal computer systems. Fascinated
+                            by how software physically interacts with hardware and memory.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 14. Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="contact-wrapper glass-card fade-up-anim">
+                    <div class="contact-info">
+                        <h2>Let's talk <span class="gradient-text">systems, code, or ideas</span>.</h2>
+                        <p>Always open to connecting with fellow engineers, collaborators, or anyone building something
+                            interesting. Drop me a message.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i data-lucide="mail"></i>
+                                <span>sohanrajadhikari@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Kathmandu, Nepal</span>
+                            </div>
+                            <div class="contact-item">
+                                <i data-lucide="github"></i>
+                                <span>github.com/sohanrajadhikari</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/placeholder"
+                        method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Send Message <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 15. Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo">RJ<span>.</span></a>
+                <p>Software Engineering Student &amp; Systems Thinker.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-content">
+                <p>&copy; <span id="current-year"></span> Sohan Raj Adhikari. All rights reserved.</p>
+                <button id="back-to-top" aria-label="Back to top">
+                    <i data-lucide="arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Command Palette Modal -->
+    <div class="cmd-palette-modal" id="cmd-palette-modal">
+        <div class="cmd-palette-content glass-card">
+            <div class="cmd-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="cmd-input" placeholder="Type a command or search..." autocomplete="off">
+                <button class="close-cmd" id="close-cmd"><i data-lucide="x"></i></button>
+            </div>
+            <div class="cmd-body">
+                <div class="cmd-group">
+                    <span class="cmd-group-title">Navigation</span>
+                    <button class="cmd-item" data-action="nav" data-target="#home">
+                        <i data-lucide="home"></i> Go to Home
+                    </button>
+                    <button class="cmd-item" data-action="nav" data-target="#projects">
+                        <i data-lucide="briefcase"></i> View Projects
+                    </button>
+                    <button class="cmd-item" data-action="nav" data-target="#contact">
+                        <i data-lucide="mail"></i> Contact Me
+                    </button>
+                </div>
+                <div class="cmd-group">
+                    <span class="cmd-group-title">Actions</span>
+                    <button class="cmd-item" data-action="theme">
+                        <i data-lucide="moon"></i> Toggle Theme
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
