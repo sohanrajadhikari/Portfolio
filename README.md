@@ -3,7 +3,7 @@
 My personal portfolio website showcasing my engineering background, automation tools, and foundational software projects. Built with a modern, high-performance aesthetic featuring fluid responsiveness, a native dark theme, and an interactive keyboard command palette (`Ctrl + K`).
 
 ## 🌐 Live Site
-Live architecture deployed cleanly at: [yourname.com.np](https://yourname.com.np)
+Live architecture deployed cleanly at: [sohanrajadhikari.com.np](https://sohanrajadhikari.com.np)
 
 ## 🛠️ Built With
 * **Structure:** Semantic HTML5 & Modern CSS3 Grid/Flexbox
